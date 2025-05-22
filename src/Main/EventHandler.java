@@ -5,8 +5,6 @@ public class EventHandler  {
     EventRect eventRect[][];
 
     int previousEventX, previousEventY;
-    // boolean canTouchEvent =true;
-
 
     public EventHandler(GamePanel gp) {
         this.gp = gp;
@@ -57,7 +55,6 @@ public class EventHandler  {
                 previousEventY =gp.player.worldY;
             }
         }
-    
         gp.player.solidArea.x = gp.player.solidAreaDefaultX;
         gp.player.solidArea.y = gp.player.solidAreaDefaultY;
         eventRect[col][row].x = eventRect[col][row].eventRectDefaultX;
