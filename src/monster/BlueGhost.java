@@ -2,8 +2,8 @@ package monster;
 
 import Entity.Entity;
 import Main.GamePanel;
-import Object.OBJ_Heart;
-import Object.OBJ_Rock;
+//import Object.OBJ_Heart;
+//import Object.OBJ_Rock;
 import java.util.Random;
 
 public class BlueGhost extends Entity {
