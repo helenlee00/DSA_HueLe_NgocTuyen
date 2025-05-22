@@ -33,14 +33,16 @@ public class EventHandler  {
     }
     public int worldX,worldY;
 
-    public void checkEvent() {
+    /*public void checkEvent() {
 
         // CHECK IF THE PLAYER CHARACTER IS MORE THAN 1 TILE AWAY FROM THE LAST EVENT
         int xDistance = Math.abs(gp.player.worldX - previousEventX);    //horizontal or vertical, take greater one
         int yDistance = Math.abs(gp.player.worldY - previousEventY);
         int distance = Math.max(xDistance,yDistance);
         
-    }
+
+        
+    }*/
     public boolean hit(int col, int row, String reqDirection) {
         boolean hit = false;
         
@@ -70,11 +72,5 @@ public class EventHandler  {
   
    
    
-    public void damagePit(int col, int row,int gameState) {
-        gp.gameState = gameState;
-        gp.playSE(6);
-        gp.ui.currentDialogue = "You fall into a pit!";
-        gp.player.life -=1 ;
-        //canTouchEvent =false;
-    }
+    
 }

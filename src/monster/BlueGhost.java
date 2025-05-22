@@ -2,8 +2,9 @@ package monster;
 
 import Entity.Entity;
 import Main.GamePanel;
-//import Object.OBJ_Heart;
-//import Object.OBJ_Rock;
+import Object.OBJ_Rock;
+
+import Object.OBJ_Heart;
 import java.util.Random;
 
 public class BlueGhost extends Entity {
@@ -30,10 +31,10 @@ public class BlueGhost extends Entity {
         getImage();
     }
     public void getImage(){
-        up1 = setup("/monster/blueGhost",gp.tileSize,gp.tileSize);
-        down1 = setup("/monster/blueGhost",gp.tileSize,gp.tileSize);
-        left1 = setup("/monster/blueGhost",gp.tileSize,gp.tileSize);
-        right1 = setup("/monster/blueGhost",gp.tileSize,gp.tileSize);
+        up1 = setup("/monster_pic/blueGhost",gp.tileSize,gp.tileSize);
+        down1 = setup("/monster_pic/blueGhost",gp.tileSize,gp.tileSize);
+        left1 = setup("/monster_pic/blueGhost",gp.tileSize,gp.tileSize);
+        right1 = setup("/monster_pic/blueGhost",gp.tileSize,gp.tileSize);
     }
     
     public void setAction()
