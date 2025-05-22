@@ -16,8 +16,8 @@ public class Entity {
     
     public int speed;
 
-    public BufferedImage up1, up2 , down1 , down2 , right1, right2, left1, left2 ; 
-    public BufferedImage attackUp1 , attackUp2, attackDown1, attackDown2, attackLeft1, attackLeft2, attackRight1,attackRight2;
+    public BufferedImage up1 , down1 , right1 , left1 ; 
+
     public int spriteCounter = 0;
     
     public Rectangle solidArea = new Rectangle(0, 0, 48, 48);
@@ -30,10 +30,10 @@ public class Entity {
     
     public BufferedImage image, image2, image3;
     public String name;
-
-
-
-public int invincibleCounter = 0;
+    
+    
+    
+    public int invincibleCounter = 0;
     //STATE
     public int worldX,worldY;
     public String direction = "down";
@@ -65,12 +65,18 @@ public int invincibleCounter = 0;
 
     // ITEM ATTRIBUTES
     public int value;
+    //public int attackValue;
+    //public int defenseValue;
+    //public String description = "";
     public int useCost; 
     //TYPE
     public int type; // 0 = player , 1= npc , 2= monster
     public final int type_player = 0;
     public final int type_npc = 1;
     public final int type_monster = 2;
+    public final int type_sword = 3;
+    public final int type_axe = 4;
+    //public final int type_shield = 5;
     public final int type_consumable = 5;
     public final int type_pickupOnly = 6;
 
@@ -217,7 +223,7 @@ public int invincibleCounter = 0;
 }
     public void damagePlayer(int attack) {
         if(gp.player.invincible == false ){
-            gp.playSE(0);
+            gp.playSE(5);
 
             int damage = attack - gp.player.defense;
             if(damage < 0)
@@ -331,6 +337,5 @@ public int invincibleCounter = 0;
         throw new UnsupportedOperationException("Not supported yet.");
     }
 }
-
 
 
